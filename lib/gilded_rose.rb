@@ -24,7 +24,7 @@ class GildedRose
     return if @quality == 0
 
     @quality -= 1
-    return if @quality == 0
+    @quality -= 1 if @days_remaining <= 0
   end
 
   def brie_tick
